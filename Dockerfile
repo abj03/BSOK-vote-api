@@ -10,6 +10,6 @@ RUN export GARCH="$(uname -m)" && if [ "${GARCH}" = "x86_64" ]; then export GARC
 FROM scratch
 
 WORKDIR /app
-COPY --from=builder /tmp//build/api-server /app/api-server
+COPY --from=builder /tmp/build/api-server /app/api-server
 
 CMD [ "/app/api-server" ]
